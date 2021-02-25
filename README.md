@@ -19,5 +19,7 @@
 #you can use the below command directly in CLI to run the test, but make sure to be on the project directory where the testng.xml file is present before executing the command:
 #mvn clean test -DsuiteXmlFile=testng.xml
 
+#created ExcelUtil class to access excel sheet as a sql table and store data in it for retrieval during test and comparing results instead of using arrays and extra for loops
+
 
 
