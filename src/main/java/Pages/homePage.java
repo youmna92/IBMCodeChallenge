@@ -9,20 +9,10 @@ import static BasePackage.BaseTest.driver;
 
 public class homePage extends BasePage {
 
-    //WebDriver driver;
-
-    //*********Constructor*********
-    /*public homePage (WebDriver driver) {
-        super(driver);
-    }*/
-
-    //*********Page Variables*********
-    String baseURL = "http://www.n11.com/";
 
 
 
     public void clickSignIn(){
-        //WebElement signIn = JsonParser.getObjectLocator("$homePage.signInButton");
         WebElement signIn = driver.findElement(By.xpath("//a[contains(text(),'Sign in')]"));
         elementClick(signIn);
     }

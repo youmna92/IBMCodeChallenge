@@ -23,7 +23,8 @@ public class checkOutTest extends BaseTest {
         checkOutPageObject.addSheets();
         checkOutPageObject.clickOnShoppingCart();
         Reporter.log("Navigated to shopping cart page successfully");
-        int numberOfItems = checkOutPageObject.returnCheckOutItemsNames();
+
+        int numberOfItems = checkOutPageObject.storeCheckOutItemsNames();
         ExcelUtils.openExcelSheet();
         int k=1;
         for (int i=0; i<numberOfItems; i++) {
@@ -35,28 +36,35 @@ public class checkOutTest extends BaseTest {
             k++;
         }
 
-        k=1;
+
+        float[] itemsPriceInHomePage = checkOutPageObject.putHomePagePricesInArray(numberOfItems);
+
+        /*k=1;
         float[] itemsPriceInHomePage = new float[numberOfItems];
         for (int i=0;i<numberOfItems;i++){
             String itemPrice = ExcelUtils.SelectCell("Select * from womenPageItems where ID='"+k+"'","Prices");
             float f = Float.parseFloat(itemPrice);
             itemsPriceInHomePage[i] = f;
             k++;
-        }
+        }*/
 
-        k=1;
+        float[] itemsPriceInCheckOut = checkOutPageObject.putcheckOutPricesInArray(numberOfItems);
+
+       /* k=1;
         float[] itemsPriceInCheckOut = new float[numberOfItems];
         for (int i=0;i<numberOfItems;i++){
             String itemPrice = ExcelUtils.SelectCell("Select * from checkOutItems where ID='"+k+"'","Prices");
             float f = Float.parseFloat(itemPrice);
             itemsPriceInCheckOut[i] = f;
             k++;
-        }
+        }*/
 
         float Sum = checkOutPageObject.findSumArray(itemsPriceInHomePage);
         float finalSum = checkOutPageObject.roundUpFloat(Sum);
         String totalPrice = ExcelUtils.SelectCell("Select * from checkOutItems where ID=101","totalPrice");
         float f = Float.parseFloat(totalPrice);
+
+        //Assertions on items prices separately and total
         Assert.assertEquals(itemsPriceInHomePage,itemsPriceInCheckOut);
         Reporter.log("Each item price in cart matches each item selected in home Page");
         Assert.assertEquals(finalSum,f);

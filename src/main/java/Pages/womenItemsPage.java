@@ -5,9 +5,7 @@ import Utilities.ExcelUtils;
 import com.codoid.products.exception.FilloException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import static BasePackage.BaseTest.driver;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -16,14 +14,13 @@ public class womenItemsPage extends BasePage {
 
 
     public void clickOnWomenPage(){
-        //WebElement women = JsonParser.getObjectLocator("womenPurchasePage.women");
         WebElement women = driver.findElement(By.xpath("//a[@title='Women']"));
         elementClick(women);
     }
 
 
 
-    public void addToCart() throws FilloException, InterruptedException {
+    public void addToCart() throws FilloException {
 
         ExcelUtils.openExcelSheet();
 

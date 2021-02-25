@@ -18,17 +18,13 @@ public class addAllAvailableItemsIntoCartTest extends BaseTest {
     }
 
     @Test(description="adding all items available into cart")
-    public void addAllAvailableItemsIntoCart() throws FilloException, InterruptedException {
+    public void addAllAvailableItemsIntoCart() throws FilloException {
 
         womenItemsPageObject.addSheets();
         womenItemsPageObject.clickOnWomenPage();
         Reporter.log("Women Items Page is now opened");
-        //womenItemsPageObject.checkInStockbutton();
-        //String[] ProductNamesAndPrices = womenItemsPageObject.addAllAvailableItemsToCart();
-        //float totalPrice = womenItemsPageObject.calculateTotalPrice(ProductNamesAndPrices);
-        //String[] listOfItemsNamesOnly = womenItemsPageObject.returnItemsNamesOnly(ProductNamesAndPrices);
         womenItemsPageObject.addToCart();
-        Reporter.log("All available Items are addedd to cart successfully");
+        Reporter.log("All available Items are added to cart successfully");
 
 
 

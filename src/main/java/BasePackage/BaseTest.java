@@ -17,9 +17,7 @@ public class BaseTest {
 
     @BeforeTest
     public void setup () {
-        //Create a Chrome driver. All test classes use this.
         WebDriverManager.chromedriver().setup();
-        //WebDriverManager.getInstance(ChromeDriver.class).setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(150, TimeUnit.SECONDS);

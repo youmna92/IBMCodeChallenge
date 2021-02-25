@@ -12,17 +12,12 @@ import java.util.Arrays;
 import static BasePackage.BaseTest.driver;
 
 public class BasePage {
-    //public static WebDriver driver;
+
     public static WebDriverWait wait;
 
     public BasePage(){
         PageFactory.initElements(driver,this);
     }
-    //Constructor
-    /*public BasePage (WebDriver driver){
-        this.driver = driver;
-        wait = new WebDriverWait(driver,15);
-    }*/
 
     public static WebElement getElement(By locator) {
         WebElement element = null;
