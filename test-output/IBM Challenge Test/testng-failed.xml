@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [IBM Challenge Test]">
+  <parameter name="ENV" value="TEST"/>
+  <parameter name="URL" value="http://automationpractice.com/index.php"/>
+  <parameter name="Browser" value="Chrome"/>
+  <test thread-count="2" name="Test On Chrome(failed)">
+    <classes>
+      <class name="tests.checkOutTest">
+        <methods>
+          <include name="setup"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+          <include name="validateCheckOutItems"/>
+        </methods>
+      </class> <!-- tests.checkOutTest -->
+    </classes>
+  </test> <!-- Test On Chrome(failed) -->
+</suite> <!-- Failed suite [IBM Challenge Test] -->

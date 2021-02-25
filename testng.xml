@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IBM Challenge Test" parallel="false" thread-count="2">
+
+    <listeners>
+        <!--        <listener class-name="Analyzer.RetryTransformer"/>-->
+        <!--        <listener class-name="Listeners.TestAllureListener"/>-->
+        <!--        <listener class-name="Listeners.TestJiraListener"/>-->
+        <!--        <listener class-name="Listeners.TestScreenCaptureListener"/>-->
+        <!--        <listener class-name="Listeners.QmetryExecutionListener"/>-->
+    </listeners>
+
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="ENV" value="TEST"/>
+    <parameter name="URL" value="http://automationpractice.com/index.php"/>
+
+    <test name="Test On Chrome">
+
+        <classes>
+            <class name="tests.signUpTest"/>
+            <class name="tests.addAllAvailableItemsIntoCartTest"/>
+            <class name="tests.checkOutTest"/>
+        </classes>
+    </test> <!-- configuration annotation Test -->
+
+    <!--    <test name="Test On Firefox">-->
+    <!--        <parameter name="Browser" value="Firefox"></parameter>-->
+    <!--        <classes>-->
+    <!--            <class name="">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test> &lt;!&ndash; configuration annotation Test &ndash;&gt;-->
+
+    <!--    <test name="Test On Edge">-->
+    <!--        <parameter name="Browser" value="Edge"></parameter>-->
+    <!--        <classes>-->
+    <!--            <class name="">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test> &lt;!&ndash; configuration annotation Test &ndash;&gt;-->
+
+    <!--    <test name="Test On InternetExplorer">-->
+    <!--        <parameter name="Browser" value="IE"></parameter>-->
+    <!--        <classes>-->
+    <!--            <class name="">-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test> &lt;!&ndash; configuration annotation Test &ndash;&gt;-->
+
+</suite> <!-- Suite -->
