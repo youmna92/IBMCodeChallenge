@@ -38,26 +38,8 @@ public class checkOutTest extends BaseTest {
 
 
         float[] itemsPriceInHomePage = checkOutPageObject.putHomePagePricesInArray(numberOfItems);
-
-        /*k=1;
-        float[] itemsPriceInHomePage = new float[numberOfItems];
-        for (int i=0;i<numberOfItems;i++){
-            String itemPrice = ExcelUtils.SelectCell("Select * from womenPageItems where ID='"+k+"'","Prices");
-            float f = Float.parseFloat(itemPrice);
-            itemsPriceInHomePage[i] = f;
-            k++;
-        }*/
-
         float[] itemsPriceInCheckOut = checkOutPageObject.putcheckOutPricesInArray(numberOfItems);
 
-       /* k=1;
-        float[] itemsPriceInCheckOut = new float[numberOfItems];
-        for (int i=0;i<numberOfItems;i++){
-            String itemPrice = ExcelUtils.SelectCell("Select * from checkOutItems where ID='"+k+"'","Prices");
-            float f = Float.parseFloat(itemPrice);
-            itemsPriceInCheckOut[i] = f;
-            k++;
-        }*/
 
         float Sum = checkOutPageObject.findSumArray(itemsPriceInHomePage);
         float finalSum = checkOutPageObject.roundUpFloat(Sum);
