@@ -2,13 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="IBM Challenge Test" parallel="false" thread-count="2">
 
-    <listeners>
-        <!--        <listener class-name="Analyzer.RetryTransformer"/>-->
-        <!--        <listener class-name="Listeners.TestAllureListener"/>-->
-        <!--        <listener class-name="Listeners.TestJiraListener"/>-->
-        <!--        <listener class-name="Listeners.TestScreenCaptureListener"/>-->
-        <!--        <listener class-name="Listeners.QmetryExecutionListener"/>-->
-    </listeners>
 
     <parameter name="Browser" value="Chrome"/>
     <parameter name="ENV" value="TEST"/>
