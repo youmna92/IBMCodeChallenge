@@ -1,9 +1,11 @@
 # IBMCodeChallenge
 
-#Prerequisites:
+# Prerequisites:
 
 Download and install Java 8.
 Download and install Apache Maven.
+
+guide to project implementation steps:
 
 project is implemented using POM approach and testNG testing annotation framework
 
